@@ -6,8 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject obstaclePrefab;
     private Vector3 spawnPos = new Vector3(35, 0, 0);
-    private float startDelay = 2.0f;
-    private float repeatRate = 2.0f;
+    private float startDelay = 1.5f;
+    private float repeatRate = 2.2f;
     public PlayerController playerControllerScript;
 
     // Start is called before the first frame update
@@ -25,6 +25,7 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnObstacle()
     {
+        // Spawns obstacles
         if (playerControllerScript.gameOver == false)
         {
             Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
